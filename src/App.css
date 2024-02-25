@@ -1,0 +1,198 @@
+.dark-grey{
+  /* background-color: #6c757d; */
+  background-color: rgba(184,184,184, .5)
+}
+.dark-dark-grey{
+  background-color: #495057;
+}
+
+nav.slide-menu{
+  height: 80%;
+  width:20%;
+  position: fixed;
+  bottom:0;
+  transition: all .2s;
+  z-index: 5;
+  text-align: center;
+}
+nav.slide-menu.open{
+  left:0
+}
+nav.slide-menu.closed{
+  left: -50%;
+}
+li.slide-menu_item{
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
+  border-left:none;
+  border-right:none;
+  width: 100%;
+  text-decoration: none;
+  list-style-type: none;
+  padding:10px 0;
+
+}
+ul.slide-menu_list{
+  padding:0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* h1.title{
+  display: inline-block;
+} */
+a{
+  text-decoration: none;
+  color: inherit;
+  
+}
+a.slide-menu_link{
+}
+div.top-icon{
+  /* padding:10px 20px; */
+  text-align: center;
+  width:10%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:5
+}
+div.slide-menu-btn{
+  width: 100%;
+  padding: 5% 0 ;
+  transition: all .2s;
+  cursor: pointer;
+}
+div.slide-menu-btn:hover{
+  background-color: aliceblue;
+}
+section{
+  width:100vw;
+  height:100vh;
+}
+video.hero-vid{
+  object-fit: cover;
+}
+div.hero-vid-overlay_container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: .5;
+}
+div.hero-cta{
+  z-index: 4;
+  position: absolute;
+  left:10vw;
+  top:40vh;
+  width: 35vw;
+  height: 20vh;
+  text-align: center;
+  opacity: 1;
+  color:black
+  
+}
+div.hero-cta, div.top-icon, div.paralax-container{
+  mix-blend-mode: difference;
+  background-color: white;
+}
+div.hero-cta-title{
+  font-size: 5rem;
+}
+div.hero-cta-subtite{
+  font-size:2rem;
+}
+div.line{
+  width: 80%;
+  border: 2px solid;
+  border-radius: inherit;
+  margin:auto;
+}
+section.slide-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.slide-text-container{
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+div.slide-text-el.slideing.slide-text-el-left{
+	animation: slide-in-left 1.5s ease-out forwards;
+}
+div.slide-text-el.slide-text-el-left{
+  transform: translateX(50vw);
+}
+div.slide-text-el.slideing.slide-text-el-right{
+	animation: slide-in-right 1.5s ease-out forwards;
+}
+div.slide-text-el.slide-text-el-right{
+  transform: translateX(50vw);
+}
+@keyframes slide-in-left {
+  0%{
+    transform: translateX(50vw);
+  }
+  /* 50%{
+    transform: translateX(-25vw);
+
+  } */
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-in-right {
+  0%{
+    transform: translateX(-50vw);
+  }
+  /* 50%{
+    transform: translateX(-25vw);
+
+  } */
+  100%{
+    transform: translateX(0%);
+  }
+}
+div.slide-text-el-text{
+  text-align: center;
+}
+div.slide-text-el-text-heading{
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+div.slide-text-el-text-content{
+  font-size:1.5rem;
+  padding-top:20px;
+}
+div.paralax-container{
+  width: 80%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Need univeral flex class */
+section.paralax{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.gradent{
+  width: 100vw;
+  height: 20vh;
+}
+div.counter{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div.paralax-content{
+  display: flex;
+
+}
